@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".vista.actividadNota.FragmentoActividades">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_actividades"
+        android:layout_width="380dp"
+        android:layout_height="570dp"
+        android:layout_gravity="center_horizontal|center_vertical" />
+
     <Button
         android:id="@+id/btn_agregarActividad"
         style="@style/Widget.Material3.Button"
@@ -22,4 +28,7 @@
         app:iconSize="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+
+
 </FrameLayout>

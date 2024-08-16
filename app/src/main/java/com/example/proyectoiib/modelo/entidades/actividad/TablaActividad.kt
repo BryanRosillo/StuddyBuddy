@@ -9,13 +9,15 @@ class TablaActividad(contexto: Context?):SQLiteHelper(contexto) {
     fun agregarActividad(
         titulo: String,
         fechaLimite: String,
-        descripcion: String
+        descripcion: String,
+        idAsignatura: Int
     ){
         val conexionEscritura = writableDatabase
         val valoresGuardar = ContentValues()
         valoresGuardar.put("titulo", titulo)
         valoresGuardar.put("fechaLimite", fechaLimite)
         valoresGuardar.put("descripcion", descripcion)
+        valoresGuardar.put("id_asignatura", idAsignatura)
         conexionEscritura.insert("ACTIVIDAD", null, valoresGuardar)
     }
 

@@ -56,6 +56,11 @@ class RecyclerViewAsignaturas(
 
         holder.frameAsignatura.setOnClickListener {
             val intent = Intent(contexto, ActividadNotaLayout::class.java)
+            intent.putExtra("id_asignatura", asignaturaActual.id)
+            intent.putExtra("nombre_asignatura", asignaturaActual.nombre)
+            intent.putExtra("profesor_asignatura", asignaturaActual.profesor)
+            intent.putExtra("aula_asignatura", asignaturaActual.aula)
+
             contexto.startActivity(intent)
         }
 
